@@ -1,0 +1,17 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev":
+      "concurrently --kill-others \"npm run build-css\" \"npm run server\"",
+    "build-css":
+      "node-sass --include-path scss sass/main.scss   css/style.css -w",
+    "server": "live-server --port=3000"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "node-sass": "^4.7.2"
+  }
+}
